@@ -12,3 +12,4 @@ class LoginPageLocators:
 
 class MainPageLocators:
     TEXT_TITLE = (By.CLASS_NAME, 'barone')
+    WELCOME_TITLE = (By.CSS_SELECTOR, 'tr.heading3 > td')

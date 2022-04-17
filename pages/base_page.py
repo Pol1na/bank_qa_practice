@@ -6,8 +6,8 @@ from selenium import webdriver
 
 class BasePage:
     def __init__(self, browser, link, timeout=4):
-        self.browser = webdriver.Chrome()
-        #self.browser = browser
+        #self.browser = webdriver.Chrome()
+        self.browser = browser
         self.link = link
         self.timeout = timeout
 
@@ -26,6 +26,5 @@ class BasePage:
             WebDriverWait(self.browser, timeout).until(EC.presence_of_element_located((how, what)))
         except NoSuchElementException:
             return True
-
         return False
 
